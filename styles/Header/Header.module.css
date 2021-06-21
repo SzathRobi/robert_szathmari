@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  width: 20rem;
+  height: 4rem;
+  margin: auto 6rem auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
