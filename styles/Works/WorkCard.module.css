@@ -25,6 +25,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: relative;
+  top: 0;
 }
 
 .categ {
@@ -60,4 +62,23 @@
 .btn:nth-of-type(2) {
   color: #fff;
   background-color: #1686e2;
+}
+
+@media (max-width: 480px) {
+  .work_card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img_container {
+    width: 90%;
+  }
+  .card_content {
+    top: -2rem;
+  }
+  .card_content h6 {
+    margin: 0.5rem 0;
+  }
+  .btn_container {
+    margin-top: 1rem;
+  }
 }

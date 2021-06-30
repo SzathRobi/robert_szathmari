@@ -67,3 +67,16 @@
 .filter_btn:nth-of-type(1) {
   color: #1686e2;
 }
+
+@media (max-width: 480px) {
+  .works {
+    left: 3rem;
+    margin-top: 10rem;
+  }
+  .works_header {
+    justify-content: center;
+  }
+  .img_container {
+    display: none;
+  }
+}

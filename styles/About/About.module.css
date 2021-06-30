@@ -1,7 +1,8 @@
 .about,
 .skills {
-  width: 100%;
+  width: 100vw;
   position: relative;
+  left: 0;
   margin: 6rem 0;
 }
 
@@ -11,7 +12,7 @@
   margin-bottom: 2rem;
 }
 
-.image_container {
+.img_container {
   position: absolute;
   left: -50%;
   top: -3rem;
@@ -35,7 +36,15 @@
 .iconYellow {
   color: #fac722;
 }
-/*
-.square {
+
+@media (max-width: 480px) {
+  .about {
+    left: 2.5rem;
+  }
+  .about_cards {
+    flex-direction: column;
+  }
+  .img_container {
+    display: none;
+  }
 }
-*/

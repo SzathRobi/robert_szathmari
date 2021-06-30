@@ -1,7 +1,34 @@
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "../../styles/Skills/Skills.module.css";
 
 function Skills() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  const boxVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      },
+    },
+  };
+
+  if (inView) {
+    controls.start("visible");
+  }
   return (
     <section className={styles.skills}>
       <h1>SKILLS</h1>
@@ -14,25 +41,48 @@ function Skills() {
       </div>
       <section className={styles.skill_container}>
         <div className={styles.skill_wrapper}>
-          <article className={styles.skill_card}>
+          <motion.article
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={boxVariants}
+            className={styles.skill_card}
+          >
             <h3>Design</h3>
             <p>Figma</p>
             <p>UI/UX fundamentals</p>
-          </article>
-          <article className={styles.skill_card}>
+          </motion.article>
+          <motion.article
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={boxVariants}
+            className={styles.skill_card}
+          >
             <h3>Languages</h3>
             <p>HTML</p>
             <p>CSS</p>
             <p>Javascript</p>
-          </article>
-          <article className={styles.skill_card}>
+          </motion.article>
+          <motion.article
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={boxVariants}
+            className={styles.skill_card}
+          >
             <h3>Database</h3>
-            <p>Figma</p>
             <p>Mongodb fundamentals</p>
-          </article>
+          </motion.article>
         </div>
         <div className={styles.skill_wrapper}>
-          <article className={styles.skill_card}>
+          <motion.article
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={boxVariants}
+            className={styles.skill_card}
+          >
             <h3>Frameworks / Libraries</h3>
             <p>Bootstrap</p>
             <p>Material-UI</p>
@@ -41,14 +91,20 @@ function Skills() {
             <p>Node</p>
             <p>Express</p>
             <p>Some small ones</p>
-          </article>
-          <article className={styles.skill_card}>
+          </motion.article>
+          <motion.article
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={boxVariants}
+            className={styles.skill_card}
+          >
             <h3>Tools</h3>
             <p>Git</p>
             <p>Chrome dev tools</p>
             <p>prettier</p>
             <p>eslint</p>
-          </article>
+          </motion.article>
         </div>
       </section>
     </section>
