@@ -19,7 +19,7 @@ function Contact() {
             <p>Budapest, Hungary</p>
           </div>
         </article>
-        <article className={styles.contact_piece}>
+        {/*<article className={styles.contact_piece}>
           <div>
             <h5>Your email:</h5>
             <input type="text" placeholder="your_email@example.com" />
@@ -28,7 +28,7 @@ function Contact() {
             <h5>Your message:</h5>
             <textarea rows="5" placeholder="Your message here..."></textarea>
           </div>
-        </article>
+        </article>*/}
       </section>
     </section>
   );

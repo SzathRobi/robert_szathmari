@@ -1,15 +1,16 @@
 import { motion, useAnimation } from "framer-motion";
+import { useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import Link from "next/link";
+import PfContext from "../../context/pfContext";
 import styles from "../../styles/Works/WorkCard.module.css";
+import router from "next/router";
 
-function WorkCard({
-  name = "Just A Project",
-  imgAlt = "project",
-  categ = "Design",
-}) {
+function WorkCard({ project }) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
+  const { setActualProject } = useContext(PfContext);
 
   const boxVariants = {
     hidden: {
@@ -34,6 +35,11 @@ function WorkCard({
     controls.start("visible");
   }
 
+  const goToProject = (project) => {
+    setActualProject(project);
+    router.push(`/works/${project.id}`);
+  };
+
   return (
     <motion.article
       ref={ref}
@@ -43,15 +49,21 @@ function WorkCard({
       className={styles.work_card}
     >
       <div className={styles.img_container}>
-        <Image src="/something.bl" layout="fill" alt={imgAlt} />
+        <Image src={`${project.images[0]}.jpg`} layout="fill" alt={"imgAlt"} />
       </div>
       <div className={styles.card_content}>
-        <h3>{name}</h3>
-        <h6 className={styles.categ}>{categ}</h6>
+        <h3>{project.name}</h3>
         <div className={styles.br} />
         <div className={styles.btn_container}>
-          <button className={styles.btn}>DETAILS</button>
-          <button className={styles.btn}>VISIT</button>
+          <button className={styles.btn} onClick={() => goToProject(project)}>
+            DETAILS
+          </button>
+
+          <Link href={project.link}>
+            <a className={`${styles.btn} ${styles.btn_visit}`} target="blank">
+              VISIT
+            </a>
+          </Link>
         </div>
       </div>
     </motion.article>

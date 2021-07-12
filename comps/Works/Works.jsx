@@ -1,5 +1,6 @@
 import Image from "next/image";
 import WorkCard from "./WorkCard";
+import { projects } from "../../projectsObject";
 import styles from "../../styles/Works/Works.module.css";
 
 function Works() {
@@ -17,16 +18,15 @@ function Works() {
         </div>
       </section>
       <section className={styles.works_content}>
-        <div className={styles.filter_container}>
+        {/*<div className={styles.filter_container}>
           <button className={styles.filter_btn}>ALL</button>
           <button className={styles.filter_btn}>DESIGN</button>
           <button className={styles.filter_btn}>DEVELOP</button>
-        </div>
+  </div>*/}
         <section className={styles.works_container}>
-          <WorkCard />
-          <WorkCard />
-          <WorkCard />
-          <WorkCard />
+          {projects.map((project) => (
+            <WorkCard key={project.id} project={project} />
+          ))}
           {/**works.map(work => <WorkCard key={work.id}/>) */}
         </section>
       </section>

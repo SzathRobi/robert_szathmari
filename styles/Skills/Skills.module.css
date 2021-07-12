@@ -1,7 +1,7 @@
 .skills {
   width: 100%;
   position: relative;
-  top: -20rem;
+  top: -15rem;
   margin: 6rem 0 0;
 }
 
@@ -11,7 +11,6 @@
   left: 30%;
   transform: translateX(50%);
   text-align: center;
-  font-size: 2rem;
 }
 
 .img_container {
@@ -56,12 +55,15 @@
 }
 
 @media (max-width: 480px) {
+  .skills {
+    top: 0;
+  }
   .skill_container {
     flex-direction: column;
   }
   .skill_wrapper {
     width: 150%;
-    left: -25%;
+    left: -10%;
   }
   .img_container {
     /* width: 35rem;
@@ -71,6 +73,6 @@
   right: 5rem;*/
     width: 25rem;
     top: -6rem;
-    right: -8rem;
+    right: -5rem;
   }
 }

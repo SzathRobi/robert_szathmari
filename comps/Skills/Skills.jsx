@@ -87,9 +87,9 @@ function Skills() {
             <p>Bootstrap</p>
             <p>Material-UI</p>
             <p>React</p>
+            <p>React Native fundamentals</p>
             <p>Next</p>
-            <p>Node</p>
-            <p>Express</p>
+            <p>Node + Express fundamentals</p>
             <p>Some small ones</p>
           </motion.article>
           <motion.article
@@ -100,6 +100,7 @@ function Skills() {
             className={styles.skill_card}
           >
             <h3>Tools</h3>
+            <p>Strapi</p>
             <p>Git</p>
             <p>Chrome dev tools</p>
             <p>prettier</p>

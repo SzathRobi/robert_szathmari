@@ -3,12 +3,12 @@
   width: 100vw;
   position: relative;
   left: 0;
+  top: 0;
   margin: 6rem 0;
 }
 
 .about h1 {
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -39,7 +39,8 @@
 
 @media (max-width: 480px) {
   .about {
-    left: 2.5rem;
+    left: 4rem;
+    top: -3rem;
   }
   .about_cards {
     flex-direction: column;
