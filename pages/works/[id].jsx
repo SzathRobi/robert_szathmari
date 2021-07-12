@@ -112,9 +112,17 @@ function Work() {
               exit={{ opacity: 0 }}
               className={styles.modal}
             >
-              <div className={styles.modal_img}>
-                <Image src={`${modalImg}.jpg`} layout="fill" />
-              </div>
+              <AnimatePresence exitBeforeEnter>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  key={modalImg}
+                  className={styles.modal_img}
+                >
+                  <Image src={`${modalImg}.jpg`} layout="fill" />
+                </motion.div>
+              </AnimatePresence>
               <button
                 onClick={() => setModalVisible(false)}
                 className={styles.btn}
