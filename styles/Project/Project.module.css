@@ -107,13 +107,19 @@
 }
 
 .btn {
-  font-size: 1.2rem;
-  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem;
   color: #fff;
   background-color: #1686e2;
   border-radius: 10rem;
   position: relative;
-  top: 1rem;
+}
+
+.btn_secondary {
+  margin-right: 2rem;
+  background-color: #fff;
+  color: #1686e2;
+  border: 2px solid #1686e2;
 }
 
 /*

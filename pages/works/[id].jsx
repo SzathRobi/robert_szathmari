@@ -94,6 +94,14 @@ function Work() {
                 ))}
               </div>
             </div>
+            <Link href={`${actualProject.codeLink}`}>
+              <a
+                className={`${styles.btn} ${styles.btn_secondary}`}
+                target="_blank"
+              >
+                CODE
+              </a>
+            </Link>
             <Link href={`${actualProject.link}`}>
               <a className={styles.btn} target="blank">
                 VISIT
