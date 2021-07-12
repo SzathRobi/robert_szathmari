@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import Header from "../comps/Header/Header";
 import Landing from "../comps/Home/Home";
 import About from "../comps/About/About";
@@ -16,6 +15,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      id="home"
       className={styles.container}
     >
       <Head>

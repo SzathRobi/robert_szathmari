@@ -10,7 +10,7 @@ import styles from "../../styles/About/About.module.css";
 
 function About() {
   return (
-    <section>
+    <section id="about">
       <section className={styles.about}>
         <h1 className={styles.about_title}>About Me</h1>
         <div className={styles.img_container}>

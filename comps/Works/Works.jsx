@@ -5,7 +5,7 @@ import styles from "../../styles/Works/Works.module.css";
 
 function Works() {
   return (
-    <section className={styles.works}>
+    <section id="works" className={styles.works}>
       <section className={styles.works_header}>
         <h1 className={styles.section_title}>WORKS</h1>
         <div className={styles.img_container}>

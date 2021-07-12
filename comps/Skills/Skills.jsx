@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "../../styles/Skills/Skills.module.css";
 
-function Skills() {
+function Skills({ scrollRef }) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -30,7 +30,7 @@ function Skills() {
     controls.start("visible");
   }
   return (
-    <section className={styles.skills}>
+    <section ref={scrollRef} className={styles.skills}>
       <h1>SKILLS</h1>
       <div className={styles.img_container}>
         <Image
