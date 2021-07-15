@@ -44,8 +44,12 @@ function Landing() {
             design and development!
           </h1>
           <div className={styles.btn_container}>
-            <button className={styles.cta}>ABOUT ME</button>
-            <button className={styles.cta}>MY WORKS</button>
+            <a href="#about" className={styles.cta}>
+              ABOUT ME
+            </a>
+            <a href="#works" className={styles.cta}>
+              MY WORKS
+            </a>
           </div>
         </div>
         <motion.div
